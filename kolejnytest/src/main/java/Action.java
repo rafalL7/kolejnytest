@@ -11,8 +11,10 @@ public class Action {
 
     }
 
-    public Action() {
-        super();
-    }
+// --Commented out by Inspection START (16.02.2022 12:07):
+//    public Action() {
+//        super();
+//    }
+// --Commented out by Inspection STOP (16.02.2022 12:07)
 }
 

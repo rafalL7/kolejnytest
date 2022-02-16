@@ -12,12 +12,13 @@ public class User {
                 '}';
     }
 
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof User)) return false;
         User user = (User) o;
-        return getName().equals(user.getName()) && getSurName().equals(user.getSurName());
+        return Objects.equals(getName(), user.getName()) && Objects.equals(getSurName(), user.getSurName());
     }
 
     @Override
@@ -29,8 +30,9 @@ public class User {
         return name;
     }
 
-    public void setName(String name) {
+    public String setName(String name) {
         this.name = name;
+        return name;
     }
 
     public String getSurName() {

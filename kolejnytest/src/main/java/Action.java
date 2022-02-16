@@ -4,7 +4,7 @@ public class Action {
         User user = new User();
         String name=user.setName("Rafał");
         name = user.getName();
-        System.out.println(name);
+        System.out.println(name+" "+" "+name);
 
 
 

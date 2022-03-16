@@ -1,0 +1,488 @@
+Index: README.md
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-16LE
+===================================================================
+diff --git a/README.md b/README.md
+new file mode 100644
+--- /dev/null	(revision a6539edce084eccfd45a5711882e0a743e98dfc3)
++++ b/README.md	(revision a6539edce084eccfd45a5711882e0a743e98dfc3)
+@@ -0,0 +1,1 @@
++# my-app
+Index: kolejnytest/src/main/java/Action.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/kolejnytest/src/main/java/Action.java b/kolejnytest/src/main/java/Action.java
+new file mode 100644
+--- /dev/null	(revision f522aa8897d3fb2a0ba66e07b2300897645061ea)
++++ b/kolejnytest/src/main/java/Action.java	(revision f522aa8897d3fb2a0ba66e07b2300897645061ea)
+@@ -0,0 +1,12 @@
++public class Action {
++    public static void main(String[] args) {
++        System.out.print("Hello World");
++        User user = new User();
++        String name = user.setName("Rafał");
++        name = user.getName();
++        System.out.println(name + " " + " " + name);
++
++
++    }
++
++}
+\ No newline at end of file
+Index: kolejnytest/src/main/java/User.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/kolejnytest/src/main/java/User.java b/kolejnytest/src/main/java/User.java
+new file mode 100644
+--- /dev/null	(revision f522aa8897d3fb2a0ba66e07b2300897645061ea)
++++ b/kolejnytest/src/main/java/User.java	(revision f522aa8897d3fb2a0ba66e07b2300897645061ea)
+@@ -0,0 +1,50 @@
++import java.nio.file.attribute.UserPrincipal;
++import java.util.Objects;
++
++public class User implements UserTest{
++    String name;
++    String surName;
++    public String setName(String name) {
++        this.name = name;
++        return name;
++    }
++
++    public String getName() {
++
++        return name;
++    }
++    public void setSurName(String surName) {
++
++        this.surName = surName;
++    }
++    public String getSurName() {
++
++        return surName;
++    }
++
++    @Override
++    public boolean equals(Object o) {
++        if (this == o) return true;
++        if (!(o instanceof User)) return false;
++        User user = (User) o;
++        return Objects.equals(getName(), user.getName()) && Objects.equals(getSurName(), user.getSurName());
++    }
++
++    @Override
++    public int hashCode() {
++        return Objects.hash(getName(), getSurName());
++    }
++
++
++    @Override
++    public String toString() {
++        return "User{" +
++                "name='" + name + '\'' +
++                ", surName='" + surName + '\'' +
++                '}';
++    }
++
++
++
++
++}
+Index: Testy/src/main/java/com/example/Testy/classes/User.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Testy/src/main/java/com/example/Testy/classes/User.java b/Testy/src/main/java/com/example/Testy/classes/User.java
+new file mode 100644
+--- /dev/null	(revision f522aa8897d3fb2a0ba66e07b2300897645061ea)
++++ b/Testy/src/main/java/com/example/Testy/classes/User.java	(revision f522aa8897d3fb2a0ba66e07b2300897645061ea)
+@@ -0,0 +1,24 @@
++package com.example.Testy.classes;
++
++import lombok.AccessLevel;
++import lombok.Setter;
++import lombok.Data;
++import lombok.ToString;
++@Data public class User {
++    @Setter(AccessLevel.PACKAGE)  private String name;
++    @Setter(AccessLevel.PACKAGE) private int age;
++    private double score;
++    private String[] tags;
++
++    public User(String name) {
++
++        this.name = name;
++    }
++
++    @ToString(includeFieldNames=true)
++    @Data(staticConstructor="of")
++    public static class Exercise<T> {
++        private final String name;
++        private final T value;
++    }
++}
+Index: Testy2/.idea/.gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Testy2/.idea/.gitignore b/Testy2/.idea/.gitignore
+new file mode 100644
+--- /dev/null	(revision f522aa8897d3fb2a0ba66e07b2300897645061ea)
++++ b/Testy2/.idea/.gitignore	(revision f522aa8897d3fb2a0ba66e07b2300897645061ea)
+@@ -0,0 +1,3 @@
++# Default ignored files
++/shelf/
++/workspace.xml
+Index: Testy2/.idea/compiler.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Testy2/.idea/compiler.xml b/Testy2/.idea/compiler.xml
+new file mode 100644
+--- /dev/null	(revision f522aa8897d3fb2a0ba66e07b2300897645061ea)
++++ b/Testy2/.idea/compiler.xml	(revision f522aa8897d3fb2a0ba66e07b2300897645061ea)
+@@ -0,0 +1,14 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="CompilerConfiguration">
++    <annotationProcessing>
++      <profile default="true" name="Default" enabled="true" />
++      <profile name="Maven default annotation processors profile" enabled="true">
++        <sourceOutputDir name="target/generated-sources/annotations" />
++        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
++        <outputRelativeToContentRoot value="true" />
++        <module name="Testy2" />
++      </profile>
++    </annotationProcessing>
++  </component>
++</project>
+\ No newline at end of file
+Index: Testy2/.idea/jarRepositories.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Testy2/.idea/jarRepositories.xml b/Testy2/.idea/jarRepositories.xml
+new file mode 100644
+--- /dev/null	(revision f522aa8897d3fb2a0ba66e07b2300897645061ea)
++++ b/Testy2/.idea/jarRepositories.xml	(revision f522aa8897d3fb2a0ba66e07b2300897645061ea)
+@@ -0,0 +1,20 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="RemoteRepositoriesConfiguration">
++    <remote-repository>
++      <option name="id" value="central" />
++      <option name="name" value="Central Repository" />
++      <option name="url" value="https://repo.maven.apache.org/maven2" />
++    </remote-repository>
++    <remote-repository>
++      <option name="id" value="central" />
++      <option name="name" value="Maven Central repository" />
++      <option name="url" value="https://repo1.maven.org/maven2" />
++    </remote-repository>
++    <remote-repository>
++      <option name="id" value="jboss.community" />
++      <option name="name" value="JBoss Community repository" />
++      <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
++    </remote-repository>
++  </component>
++</project>
+\ No newline at end of file
+Index: Testy2/.idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Testy2/.idea/misc.xml b/Testy2/.idea/misc.xml
+new file mode 100644
+--- /dev/null	(revision f522aa8897d3fb2a0ba66e07b2300897645061ea)
++++ b/Testy2/.idea/misc.xml	(revision f522aa8897d3fb2a0ba66e07b2300897645061ea)
+@@ -0,0 +1,17 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ExternalStorageConfigurationManager" enabled="true" />
++  <component name="MavenProjectsManager">
++    <option name="originalFiles">
++      <list>
++        <option value="$PROJECT_DIR$/pom.xml" />
++      </list>
++    </option>
++  </component>
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_13" default="true" project-jdk-name="13" project-jdk-type="JavaSDK">
++    <output url="file://$PROJECT_DIR$/out" />
++  </component>
++  <component name="ProjectType">
++    <option name="id" value="jpab" />
++  </component>
++</project>
+\ No newline at end of file
+Index: Testy2/.idea/runConfigurations.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Testy2/.idea/runConfigurations.xml b/Testy2/.idea/runConfigurations.xml
+new file mode 100644
+--- /dev/null	(revision f522aa8897d3fb2a0ba66e07b2300897645061ea)
++++ b/Testy2/.idea/runConfigurations.xml	(revision f522aa8897d3fb2a0ba66e07b2300897645061ea)
+@@ -0,0 +1,10 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="RunConfigurationProducerService">
++    <option name="ignoredProducers">
++      <set>
++        <option value="com.android.tools.idea.compose.preview.runconfiguration.ComposePreviewRunConfigurationProducer" />
++      </set>
++    </option>
++  </component>
++</project>
+\ No newline at end of file
+Index: Testy2/.idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Testy2/.idea/vcs.xml b/Testy2/.idea/vcs.xml
+new file mode 100644
+--- /dev/null	(revision f522aa8897d3fb2a0ba66e07b2300897645061ea)
++++ b/Testy2/.idea/vcs.xml	(revision f522aa8897d3fb2a0ba66e07b2300897645061ea)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="$PROJECT_DIR$/.." vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
+Index: Testy2/pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Testy2/pom.xml b/Testy2/pom.xml
+new file mode 100644
+--- /dev/null	(revision f522aa8897d3fb2a0ba66e07b2300897645061ea)
++++ b/Testy2/pom.xml	(revision f522aa8897d3fb2a0ba66e07b2300897645061ea)
+@@ -0,0 +1,23 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project xmlns="http://maven.apache.org/POM/4.0.0"
++         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
++         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
++    <modelVersion>4.0.0</modelVersion>
++
++    <groupId>org.example</groupId>
++    <artifactId>Testy2</artifactId>
++    <version>1.0-SNAPSHOT</version>
++    <dependencies>
++        <dependency>
++            <groupId>org.projectlombok</groupId>
++            <artifactId>lombok</artifactId>
++            <version>1.18.22</version>
++        </dependency>
++    </dependencies>
++
++    <properties>
++        <maven.compiler.source>13</maven.compiler.source>
++        <maven.compiler.target>13</maven.compiler.target>
++    </properties>
++
++</project>
+\ No newline at end of file
+Index: Testy2/src/main/java/classes/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Testy2/src/main/java/classes/Main.java b/Testy2/src/main/java/classes/Main.java
+new file mode 100644
+--- /dev/null	(revision 7e9d2300bad8f3025861c99f748ef8862e52fdce)
++++ b/Testy2/src/main/java/classes/Main.java	(revision 7e9d2300bad8f3025861c99f748ef8862e52fdce)
+@@ -0,0 +1,13 @@
++package classes;
++
++public class Main {
++    public static void main(String[] args) {
++        System.out.println("Hello world");
++        User user = new User();
++        user.setName("Aga");
++        System.out.println(user.getName());
++        user.toString();
++        user.setAge(18);
++
++    }
++}
+Index: Testy2/src/main/java/classes/User.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Testy2/src/main/java/classes/User.java b/Testy2/src/main/java/classes/User.java
+new file mode 100644
+--- /dev/null	(revision f522aa8897d3fb2a0ba66e07b2300897645061ea)
++++ b/Testy2/src/main/java/classes/User.java	(revision f522aa8897d3fb2a0ba66e07b2300897645061ea)
+@@ -0,0 +1,28 @@
++package classes;
++
++//import lombok.AccessLevel;
++import lombok.Data;
++//import lombok.Setter;
++//import lombok.Getter;
++import lombok.ToString;
++@Data
++//@Setter(AccessLevel.PACKAGE)
++//@Getter(AccessLevel.PACKAGE)
++public class User {
++     private String name;
++     private int age;
++     private double score;
++     private String[] tags;
++
++    @ToString(includeFieldNames=true)
++    @Data(staticConstructor="of")
++    public static class Exercise<T> {
++        private final String name;
++        private int age;
++        private double score;
++        private String[] tags;
++        private final T value;
++    }
++}
++
++
+Index: designer-master/.idea/.gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/designer-master/.idea/.gitignore b/designer-master/.idea/.gitignore
+new file mode 100644
+--- /dev/null	(revision f522aa8897d3fb2a0ba66e07b2300897645061ea)
++++ b/designer-master/.idea/.gitignore	(revision f522aa8897d3fb2a0ba66e07b2300897645061ea)
+@@ -0,0 +1,3 @@
++# Default ignored files
++/shelf/
++/workspace.xml
+Index: designer-master/.idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/designer-master/.idea/misc.xml b/designer-master/.idea/misc.xml
+new file mode 100644
+--- /dev/null	(revision f522aa8897d3fb2a0ba66e07b2300897645061ea)
++++ b/designer-master/.idea/misc.xml	(revision f522aa8897d3fb2a0ba66e07b2300897645061ea)
+@@ -0,0 +1,9 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_13" default="true" project-jdk-name="13" project-jdk-type="JavaSDK">
++    <output url="file://$PROJECT_DIR$/classes" />
++  </component>
++  <component name="ProjectType">
++    <option name="id" value="jpab" />
++  </component>
++</project>
+\ No newline at end of file
+Index: designer-master/.idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/designer-master/.idea/modules.xml b/designer-master/.idea/modules.xml
+new file mode 100644
+--- /dev/null	(revision f522aa8897d3fb2a0ba66e07b2300897645061ea)
++++ b/designer-master/.idea/modules.xml	(revision f522aa8897d3fb2a0ba66e07b2300897645061ea)
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectModuleManager">
++    <modules>
++      <module fileurl="file://$PROJECT_DIR$/designer-master.iml" filepath="$PROJECT_DIR$/designer-master.iml" />
++    </modules>
++  </component>
++</project>
+\ No newline at end of file
+Index: designer-master/.idea/runConfigurations.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/designer-master/.idea/runConfigurations.xml b/designer-master/.idea/runConfigurations.xml
+new file mode 100644
+--- /dev/null	(revision f522aa8897d3fb2a0ba66e07b2300897645061ea)
++++ b/designer-master/.idea/runConfigurations.xml	(revision f522aa8897d3fb2a0ba66e07b2300897645061ea)
+@@ -0,0 +1,10 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="RunConfigurationProducerService">
++    <option name="ignoredProducers">
++      <set>
++        <option value="com.android.tools.idea.compose.preview.runconfiguration.ComposePreviewRunConfigurationProducer" />
++      </set>
++    </option>
++  </component>
++</project>
+\ No newline at end of file
+Index: designer-master/.idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/designer-master/.idea/vcs.xml b/designer-master/.idea/vcs.xml
+new file mode 100644
+--- /dev/null	(revision f522aa8897d3fb2a0ba66e07b2300897645061ea)
++++ b/designer-master/.idea/vcs.xml	(revision f522aa8897d3fb2a0ba66e07b2300897645061ea)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="$PROJECT_DIR$/.." vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
+Index: designer-master/designer-master.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/designer-master/designer-master.iml b/designer-master/designer-master.iml
+new file mode 100644
+--- /dev/null	(revision f522aa8897d3fb2a0ba66e07b2300897645061ea)
++++ b/designer-master/designer-master.iml	(revision f522aa8897d3fb2a0ba66e07b2300897645061ea)
+@@ -0,0 +1,9 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="JAVA_MODULE" version="4">
++  <component name="NewModuleRootManager">
++    <output url="file://$MODULE_DIR$/bin" />
++    <exclude-output />
++    <content url="file://$MODULE_DIR$" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++</module>
+\ No newline at end of file
+Index: empir/.idea/empir.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/empir/.idea/empir.iml b/empir/.idea/empir.iml
+new file mode 100644
+--- /dev/null	(revision f522aa8897d3fb2a0ba66e07b2300897645061ea)
++++ b/empir/.idea/empir.iml	(revision f522aa8897d3fb2a0ba66e07b2300897645061ea)
+@@ -0,0 +1,9 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="JAVA_MODULE" version="4">
++  <component name="NewModuleRootManager" inherit-compiler-output="true">
++    <exclude-output />
++    <content url="file://$MODULE_DIR$" />
++    <orderEntry type="inheritedJdk" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++</module>
+\ No newline at end of file

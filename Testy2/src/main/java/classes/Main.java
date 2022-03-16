@@ -7,7 +7,7 @@ public class Main {
         user.toString();
         user.setAge(18);
         user.setName("Aga");
-        System.out.println(user.getName()+" "+user.getAge());
+        System.out.println(user.getName()+" "+user.getAge()+" "+user.toString());
 
 
     }

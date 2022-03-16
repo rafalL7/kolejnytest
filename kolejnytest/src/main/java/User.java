@@ -1,17 +1,26 @@
+import java.nio.file.attribute.UserPrincipal;
 import java.util.Objects;
 
-public class User {
+public class User implements UserTest{
     String name;
     String surName;
-
-    @Override
-    public String toString() {
-        return "User{" +
-                "name='" + name + '\'' +
-                ", surName='" + surName + '\'' +
-                '}';
+    public String setName(String name) {
+        this.name = name;
+        return name;
     }
 
+    public String getName() {
+
+        return name;
+    }
+    public void setSurName(String surName) {
+
+        this.surName = surName;
+    }
+    public String getSurName() {
+
+        return surName;
+    }
 
     @Override
     public boolean equals(Object o) {
@@ -26,20 +35,16 @@ public class User {
         return Objects.hash(getName(), getSurName());
     }
 
-    public String getName() {
-        return name;
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "name='" + name + '\'' +
+                ", surName='" + surName + '\'' +
+                '}';
     }
 
-    public String setName(String name) {
-        this.name = name;
-        return name;
-    }
 
-    public String getSurName() {
-        return surName;
-    }
 
-    public void setSurName(String surName) {
-        this.surName = surName;
-    }
+
 }

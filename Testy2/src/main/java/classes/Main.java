@@ -9,6 +9,5 @@ public class Main {
         user.setName("Aga");
         System.out.println(user.getName()+" "+user.getAge());
 
-
     }
 }

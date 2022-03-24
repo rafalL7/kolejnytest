@@ -1,10 +1,12 @@
 package classes;
 
 //import lombok.AccessLevel;
+import lombok.Builder;
 import lombok.Data;
 //import lombok.Setter;
 //import lombok.Getter;
 import lombok.ToString;
+
 @Data
 //@Setter(AccessLevel.PACKAGE)
 //@Getter(AccessLevel.PACKAGE)
@@ -13,6 +15,8 @@ public class User {
      private int age;
      private double score;
      private String[] tags;
+
+
 
     @ToString(includeFieldNames=true)
     @Data(staticConstructor="of")

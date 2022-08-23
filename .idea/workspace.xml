@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="99bdb5c7-311a-4bee-88ee-fe8f741003f4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/ItemProject/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ItemProject/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ItemProject/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ItemProject/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ItemProject/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ItemProject/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ItemProject/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NewApp/.jpb/persistence-units.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NewApp/src/main/java/pl/sarnecki/NewApp/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Nowy/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Nowy/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Nowy/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Nowy/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Nowy/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Nowy/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Nowy/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Nowy/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Nowy/src/main/java/DocumentItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Nowy/src/main/java/Item.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Nowy/src/main/java/Start.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Nowy/target/classes/DocumentItem.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Nowy/target/classes/Item.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Nowy/target/classes/Start.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pl.sarnecki/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pl.sarnecki/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pl.sarnecki/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pl.sarnecki/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pl.sarnecki/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pl.sarnecki/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pl.sarnecki/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pl.sarnecki/src/main/java/app/Config.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pl.sarnecki/src/main/java/app/Hello.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ticket/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ticket/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ticket/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ticket/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ticket/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ticket/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ticket/src/main/java/pl/sarnecki/ticket/TicketApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ticket/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ticket/src/test/java/pl/sarnecki/ticket/TicketApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Librarytest/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Librarytest/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Librarytest/src/User" beforeDir="false" afterPath="$PROJECT_DIR$/Librarytest/src/User" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Testy2/src/main/java/classes/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Testy2/src/main/java/classes/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/rafa-sarnecki/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/backup/rafa-sarnecki/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/rafa-sarnecki/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/backup/rafa-sarnecki/pnpm-lock.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kolejnytest/src/test/java/UserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/kolejnytest/src/test/java/UserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/main/java/com/example/application/data/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/main/java/com/example/application/data/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/main/java/com/example/application/data/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/main/java/com/example/application/data/service/UserService.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2AcFbwoCfiUvEouVXPs6IfMtpan" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="99bdb5c7-311a-4bee-88ee-fe8f741003f4" name="Changes" comment="" />
+      <created>1655301042939</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1655301042939</updated>
+    </task>
+    <servers />
+  </component>
+</project>

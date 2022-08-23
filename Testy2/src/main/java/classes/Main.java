@@ -25,9 +25,11 @@ public class Main {
         if (object instanceof String){
             String someText = (String) object;
             System.out.println("Text: "+someText);
+
         }
         else {
             System.out.println("other type");
+            /**/
         }
     }
 }
